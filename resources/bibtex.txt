@@ -1,0 +1,6 @@
+@inproceedings{devaranjan2020metasim2,
+ title={Meta-Sim2: Learning to Generate Synthetic Datasets},
+ author={Devaranjan, Jeevan and Kar, Amlan and Fidler, Sanja},
+ booktitle={ECCV},
+ year={2020}
+}

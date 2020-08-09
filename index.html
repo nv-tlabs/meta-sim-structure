@@ -1,0 +1,373 @@
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53775284-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53775284-8');
+</script>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+</head>
+
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-weight:300;
+        margin: 0.4em;
+    }
+
+    p {
+        margin: 0.2em;
+    }
+
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        padding: 20px;
+    }
+
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #208799;
+    }
+
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+                15px 15px 0 0px #fff, /* The fourth layer */
+                15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+                20px 20px 0 0px #fff, /* The fifth layer */
+                20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+                25px 25px 0 0px #fff, /* The fifth layer */
+                25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr
+    {
+        margin: 0;
+        border: 0;
+        height: 1.5px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+</style>
+
+<html>
+  <head>
+        <title>Meta-Sim2</title>
+        <meta property="og:title" content="meta-sim" />
+  </head>
+
+  <body>
+    <br>
+    <center>
+    <span style="font-size:44px">Meta-Sim 2</span> 
+    <br>
+    <span style="font-size:33px"> Unsupervised Learning of Scene Structure for Synthetic Data Generation</span>
+    </center>
+
+    <br>
+    <table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><a href="">Jeevan Devaranjan*</a><sup>1,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~amlan/">Amlan Kar*</a><sup> 1,2,4</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~fidler/">Sanja Fidler</a><sup>1,2,4</sup></span>
+            </center>
+        </td>
+     </tr>     		
+    </table>
+    
+    <br>
+    <table align=center width=900px>
+       <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px"><sup>1</sup>NVIDIA</span>
+        </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><sup>2</sup>University of Toronto</span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><sup>3</sup>University of Waterloo</span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><sup>4</sup>Vector Institute</span>
+            </center>
+        </td>
+     </tr>
+    </table>
+    
+    <table align=center width=700px>
+       <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px;color:red"> ECCV 2020</span>
+        </center>
+        </td>
+     </tr>
+    </table>
+
+            <br>
+            <table align=center width=900px>
+                <tr>
+                    <td width="900px">
+                        <center>
+                        <video width="380" controls>
+                                <source src="resources/Meta-Sim2-1 minute.mp4" type="video/mp4"/>
+                        </video>                                      
+    
+                        <a href="#"><img src = "https://amlankar.github.io/img/meta-sim2.jpg" width="490px" height="200px"></img>                        
+                        </center>
+                    </td>    
+                </tr>
+                <!-- <tr>
+                    <td width=700px>
+                        <center>
+                          <a href="#"><img src = "./resources/meta-sim-teaser.png" width="700px" height="280px"></img></href></a><br>
+                        </center>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td width=900px>
+                        <center>
+                            <a href="#"><img src = "./resources/meta-sim-gif.gif" width="870px"></img>                        
+                        </center>
+                    </td>
+                    <!--  -->
+                </tr>
+
+            </table>
+            <table align=center width=900px></table>
+                <tr>
+                    <td width=600px>
+                    <br>  
+                    <center>
+                          <!--  -->
+                    </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width=600px>
+                        <br>
+                        <p align="justify" style="font-size: 18px">
+                            Procedural models are being widely used to synthesize scenes for graphics, gaming, and to create (labeled) synthetic datasets for ML. In order to produce realistic and diverse scenes, a number of parameters governing the procedural models have to be carefully tuned by experts. These parameters control both the structure of scenes being generated (e.g. how many cars in the scene), as well as parameters which place objects in valid configurations. Meta-Sim aimed at automatically tuning parameters given a target collection of real images in an unsupervised way. In Meta-Sim2, we aim to learn the scene structure in addition to parameters, which is a challenging problem due to its discrete nature. Meta-Sim2 proceeds by learning to sequentially sample rule expansions from a given probabilistic scene grammar. Due to the discrete nature of the problem, we use Reinforcement Learning to train our model, and design a feature space divergence between our synthesized and target images that is key to successful training. Experiments on a real driving dataset show that, without any supervision, we can successfully learn to generate data that captures discrete structural statistics of objects, such as their frequency, in real images. We also show that this leads to downstream improvement in the performance of an object detector trained on our generated dataset as opposed to other baseline simulation methods.                       
+                        </p>
+                        <p align="justify" style="font-size: 14px">
+                        * denotes equal contribution. Work done during JD's internship at NVIDIA 
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+
+          <br>
+          <hr>
+            <table align=center width=700>
+             <center><h1>News</h1></center>
+                <tr>
+                <ul>
+                <li>[Coming Soon] <font color='red'>Code Release</font></a></li>
+                <li>[Coming Soon] Paper released on <a href="">arXiv</a></li>
+                <li>[June 2020] Paper accepted to ECCV 2020!</a></li>
+            </ul>
+                </tr>
+            </table>
+         <br>
+         <hr>
+         <!-- <table align=center width=550px> -->
+            <table align=center width=700>
+             <center><h1>Paper</h1></center>
+                <tr>
+                  <td><a href="" target="_blank"><img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.jpg"/></a></td>
+                  <td><span style="font-size:18px">Jeevan Devaranjan*, Amlan Kar*, Sanja Fidler
+                    <br><br>
+                    Meta-Sim2: Unsupervised Learning of Scene Structure for Synthetic Data Generation
+                    <br><br>
+                    ECCV, 2020
+                    <br>
+                    </td>
+              </tr>
+            </table>
+            <br>
+
+            <table align=center width=700px>
+              <tr>
+                  <td>  
+                    <span style="font-size:18px"><center>
+                      <a href="">[Preprint]</a>
+                    </center></td>
+
+                  <td><span style="font-size:18px"><center>
+                      <a href="./resources/bibtex.txt">[Bibtex]</a>
+                    </center></td>
+                  
+                  <!-- <td><span style="font-size:18px"><center> -->
+                      <!-- <a href="https://www.youtube.com/watch ">[Video]</a> -->
+                    <!-- </center></td> -->
+
+   
+              </tr>
+              <tr>
+           
+              </tr>
+            </table>
+            <br>
+        <hr>
+
+         <center><h1>Presentation Video</h1></center>
+            <table align=center width=900px>
+                <tr align=center width=900px>
+                    <td>
+                        <video width="900px" controls>
+                            <source src="resources/Meta-Sim2-full-compressed-2.mp4" type="video/mp4"/>
+                        </video>                                      
+                    </td>
+                </tr>
+                <tr width=900px>
+                    <td>
+                        <center>
+                        <span style='text-align: center; font-size:100%'>
+                        Please checkout our presentation video for a walk-through of the method and results
+                        </span>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+          <hr>
+
+          <center><h1>Qualitative Results</h1></center> <br>
+
+        <table align=center width=900px>
+              <tr>
+                  <table align=center width='900px' margin:auto>
+                    <tr align=center width=900px>
+                        <td width='33%' style='text-align: center; font-size:150%'>Input Prob. Grammar</td>
+                        <td width='33%' style='text-align: center; font-size:150%'>Meta-Sim2</td>
+                        <td width='33%' style='text-align: center; font-size:150%'>KITTI Dataset</td>
+
+                    </tr>
+
+                  </table>
+                  <td>
+                    <center>
+                        <a href="#"><img src = "./resources/qual.jpg" width="900px"></img></a><br>
+                    </center>
+                  </td>
+                  <tr width=900px>
+                        <td>
+                            <center>
+                            <span style='text-align: center; font-size:90%'>
+                            (left) samples from our prob. grammar, (middle) Meta-Sim2’s corresponding samples, (right) random samples from KITTI. Notice how the model learns to generate diverse scene structures by adding vegetation, people, bikes and even road signs, making it emulate the target dataset better
+                            </span>
+                            </center>
+                        </td>
+                    </tr>
+        </table>
+
+        <br/><br/>
+
+
+        <hr>
+        <br>
+        <table style="font-size:14px" align=center>
+        <tr>
+        <td>
+            This webpage template was borrowed from <a href='https://richzhang.github.io/colorization/'>Richard Zhang</a>.
+        </td>
+        </tr>
+        </table>
+
+</body>
+</html>
